@@ -4,7 +4,7 @@ A easy to use python script that can batch all files inside a folder
 For example, with this script you can run ffprobe with all files inside this folder, or run ffmpeg y convert all files into any desired format
 
 ## Installation:
-1. Download pybatch.py
+1. Download pybatch.py either by git clone or downloading through the releases tab
 2. Place the file inside your working directory
 
 ## Usage
