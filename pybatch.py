@@ -75,7 +75,7 @@ if '[o]' in command:
 # Command loop with [i] and [o] replacement
 for file in list_files:
     command = command_def
-    output_file = file.replace(file_type, "") # remove the file extension, to avoid '.mp4.mp3' gibberish
+    output_file = file.split('.', 1)[0] # remove the file extension, to avoid '.mp4.mp3' gibberish
     command = command.replace('[i]', directory + file) 
     if "[o]" not in command:
         command = command.replace('[o]', "")
