@@ -1,4 +1,5 @@
 # pybatch
+# github.com/sbritorodr/pybatch
 # This program executes any instruction for all files inside a folder 
 # (e.g. convert all these mp4 files into mkv using ffmpeg)
 
@@ -7,8 +8,21 @@
 # sustitute input for each instance and generate an output with the same 
 # name inside an ./output folder
 
-import os
+# Title screen
+print('''
+            ______       _       _     
+            | ___ \     | |     | |    
+ _ __  _   _| |_/ / __ _| |_ ___| |__  
+| '_ \| | | | ___ \/ _` | __/ __| '_ \ 
+| |_) | |_| | |_/ / (_| | || (__| | | |
+| .__/ \__, \____/ \__,_|\__\___|_| |_|
+| |     __/ |                          
+|_|    |___/                           
 
+Make orders automatically
+github.com/sbritorodr/pybatch
+''')
+import os
 # help function
 def help():
     print(
@@ -23,7 +37,7 @@ def help():
 pwd = os.path.dirname(os.path.abspath(__file__))
 
 # get folder:
-input_folder = str(input("Add your folder path or leave it blank to select \"./input/ \": \n")) or "./input/"
+input_folder = str(input("Add your folder path or leave it blank to select \"./ \": \n")) or "./"
 print("You selected this folder: " + input_folder)
 
 directory = pwd
@@ -83,4 +97,5 @@ for file in list_files:
         command = command.replace('[o]', pwd + "/output/" + output_file)
     print(command)
     os.system(command)
-print("\n Script finished with no errors")
+# End message
+print("\n \n Script finished with no errors. If something has gone wrong, check if you write the command correctly")
